@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <!-- Navbar component for global navigation -->
-    <Navbar />
+    <AppNavbar />
     
     <!-- Router View: This is where the routed pages will be injected -->
     <router-view />
@@ -10,12 +10,12 @@
 
 <script>
 // Importing the Navbar component
-import Navbar from './components/Navbar.vue';
+import AppNavbar from './components/AppNavbar.vue';
 
 export default {
   name: 'App',
   components: {
-    Navbar
+    AppNavbar
   }
 };
 </script>
