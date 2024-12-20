@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div v-if="services">
       <h1>Our Services</h1>
       <p>We offer the following time-based electrolysis hair removal services:</p>
       <table>
@@ -10,25 +10,9 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>5 minutes</td>
-            <td>$40</td>
-          </tr>
-          <tr>
-            <td>10 minutes</td>
-            <td>$55</td>
-          </tr>
-          <tr>
-            <td>15 minutes</td>
-            <td>$90</td>
-          </tr>
-          <tr>
-            <td>30 minutes</td>
-            <td>$125</td>
-          </tr>
-          <tr>
-            <td>45 minutes</td>
-            <td>$150</td>
+          <tr v-for="service in services" :key="service.duration">
+            <td>{{ service.duration }}</td>
+            <td>{{ service.price }}</td>
           </tr>
         </tbody>
       </table>
@@ -36,8 +20,16 @@
   </template>
   
   <script>
+  // Using Import the JSON data directly for now
+  import servicesDataJson from '@/data/services.json';
+  
   export default {
-    name: 'ServicesView',
+    name: "ServicesView",
+    data() {
+      return {
+        services: servicesDataJson,
+      };
+    }
   };
   </script>
   

@@ -1,0 +1,22 @@
+// Import Bootstrap SASS after customizations
+@import 'bootstrap/scss/bootstrap';
+
+// Import all partials
+@import 'variables';
+@import 'mixins';
+
+// Global Styles
+body {
+  font-family: $font-family;
+  background-color: #f4f4f4;
+}
+
+h1, h2, h3 {
+  color: $primary-color;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
