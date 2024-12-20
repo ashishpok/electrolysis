@@ -18,11 +18,3 @@
     }
   };
   </script>
-  
-  <style scoped>
-  h1 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-  }
-  </style>
-  

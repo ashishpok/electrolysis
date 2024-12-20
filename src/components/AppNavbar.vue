@@ -41,9 +41,3 @@ export default {
   name: 'AppNavbar',
 };
 </script>
-
-<style scoped>
-.navbar-brand {
-  font-weight: bold;
-}
-</style>

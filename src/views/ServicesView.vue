@@ -32,22 +32,3 @@
     }
   };
   </script>
-  
-  <style scoped>
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-  }
-  
-  th, td {
-    border: 1px solid #ddd;
-    text-align: left;
-    padding: 8px;
-  }
-  
-  th {
-    background-color: #f4f4f4;
-  }
-  </style>
-  

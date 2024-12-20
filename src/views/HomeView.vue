@@ -29,11 +29,3 @@
   };
   </script>
   
-  <style scoped>
-  .banner-image {
-    width: 100%;
-    height: auto;
-    margin-top: 20px;
-  }
-  </style>
-  

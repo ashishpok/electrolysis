@@ -22,12 +22,5 @@ export default {
 
 <style>
 /* You can add global styles here */
-body {
-  font-family: Arial, sans-serif;
-}
-#app {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
+
 </style>
