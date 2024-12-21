@@ -16,13 +16,13 @@ export default {
   name: 'App',
   components: {
     AppNavbar
-  },
+  }/*,
   mounted() {
     document.body.classList.add('starter-page-page');
   },
   beforeUnmount() {
     document.body.classList.remove('starter-page-page');
-  }
+  }*/
 };
 </script>
 

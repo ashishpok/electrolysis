@@ -3,38 +3,3 @@
 
 // Import all partials
 @import 'variables';
-@import 'mixins';
-
-// View specific styles
-@import 'appnavbar';
-@import 'navmenu';
-@import 'header';
-@import 'general';
-
-// Global Styles
-#app {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-body {
-  font-family: $font-family;
-  background-color: #f4f4f4;
-}
-
-h1, h2, h3 {
-  color: $primary-color;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-.banner-image {
-    width: 100%;
-    height: auto;
-    margin-top: 20px;
-}

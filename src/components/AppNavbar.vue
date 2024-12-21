@@ -71,16 +71,14 @@
 </template>
 
 <script>
-import { onMounted, onBeforeUnmount } from 'vue';
-import { initNavbar } from '@/assets/js/appnavbar.js';
-import '@/assets/styles/_appnavbar.scss';
+import { onMounted } from 'vue';
 
 export default {
   name: 'AppNavbar',
   setup() {
+    // We'll update this later with theme's JavaScript initialization
     onMounted(() => {
-      const cleanup = initNavbar();
-      onBeforeUnmount(cleanup);
+      // Theme JS initialization will go here
     });
   }
 };
