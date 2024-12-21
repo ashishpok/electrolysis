@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div>
     <!-- Navbar component for global navigation -->
     <AppNavbar />
     
@@ -16,6 +16,12 @@ export default {
   name: 'App',
   components: {
     AppNavbar
+  },
+  mounted() {
+    document.body.classList.add('starter-page-page');
+  },
+  beforeUnmount() {
+    document.body.classList.remove('starter-page-page');
   }
 };
 </script>
