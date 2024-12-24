@@ -1,13 +1,20 @@
-<!-- Example of a valid placeholder file -->
 <template>
-    <div>
-      <h1>Placeholder Content</h1>
+    <div v-if="aboutData">
+      <h1>{{ aboutData.title }}</h1>
+      <p>{{ aboutData.description }}</p>
     </div>
   </template>
   
-  <script>
+  <script>  
+  // Using Import the JSON data directly for now
+  import aboutDataJson from '@/data/about.json';
+  
   export default {
-    name: 'AboutView', // Replace with the actual view's name
+    name: "AboutView",
+    data() {
+      return {
+        aboutData: aboutDataJson,
+      };
+    }
   };
   </script>
-  

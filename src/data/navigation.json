@@ -1,0 +1,37 @@
+{
+  "mainNav": [
+    {
+      "text": "Home",
+      "link": "/"
+    },
+    {
+      "text": "About",
+      "link": "/about"
+    },
+    {
+      "text": "Locations",
+      "link": "/locations"
+    },
+    {
+      "text": "Services",
+      "items": [
+        {
+          "text": "Service 1",
+          "link": "/services/service1"
+        },
+        {
+          "text": "Service 2",
+          "link": "/services/service2"
+        },
+        {
+          "text": "Service 3",
+          "link": "/services/service3"
+        }
+      ]
+    },
+    {
+      "text": "Contact",
+      "link": "/contact"
+    }
+  ]
+} 

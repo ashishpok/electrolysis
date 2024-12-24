@@ -1,0 +1,8 @@
+{
+  "useful": [
+    { "text": "Home", "url": "/" },
+    { "text": "About us", "url": "/about" },
+    { "text": "Services", "url": "/services" },
+    { "text": "Terms of service", "url": "/terms" }
+  ]
+} 

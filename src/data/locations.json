@@ -1,0 +1,21 @@
+{
+  "locations": [
+    {
+      "address": "22228 Fairlawn Dr",
+      "city": "Ashburn",
+      "state": "VA",
+      "zip": "20148",
+      "phone": "+1 5589 55488 55",
+      "email": "info@example.com"
+    },
+    {
+      "address": "143 Church St",
+      "city": "Vienna",
+      "state": "VA",
+      "zip": "22180",
+      "phone": "+1 5589 55488 55",
+      "email": "info@example.com"
+    }
+  ]
+}
+  
