@@ -7,7 +7,6 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <link rel="icon" href="<%= BASE_URL %>favicon.ico">
   <!-- Theme CSS -->
-
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
   <link
@@ -20,10 +19,6 @@
   <link href="<%= BASE_URL %>theme/vendor/aos/aos.css" rel="stylesheet">
   <link href="<%= BASE_URL %>theme/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="<%= BASE_URL %>theme/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Main CSS File -->
-  <link href="<%= BASE_URL %>theme/css/main.css" rel="stylesheet">
-  <!-- Theme CSS End -->
 
   <title>
     <%= htmlWebpackPlugin.options.title %>
@@ -39,10 +34,7 @@
 
   <!-- Load theme's components and main.js before Vue app -->
   <!-- Vue app will be injected after these -->
-
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
-
+  <script src="<%= BASE_URL %>theme/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="<%= BASE_URL %>theme/vendor/aos/aos.js"></script>
   <script src="<%= BASE_URL %>theme/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="<%= BASE_URL %>theme/vendor/purecounter/purecounter_vanilla.js"></script>
@@ -50,8 +42,6 @@
   <script src="<%= BASE_URL %>theme/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="<%= BASE_URL %>theme/vendor/swiper/swiper-bundle.min.js"></script>
 
-  <!-- Main JS File -->
-  <script src="<%= BASE_URL %>theme/js/main.js"></script>
 </body>
 
 </html>
