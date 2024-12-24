@@ -1,31 +1,42 @@
 <template>
-    <div v-if="homeData">
-      <h1>{{ homeData.title }}</h1>
-      <p>{{ homeData.subtitle }}</p>
-      <img
-        :src="homeData.bannerImage"
-        alt="Electrolysis Hair Removal"
-        class="banner-image"
-      />
-    </div>
-  </template>
-  
-  <script>
-  // Async requires a backend API or data has to be moved to public
-  // Using Import the JSON data directly for now
-  import homeDataJson from '@/data/home.json';
+  <main class="main">
+    <!-- Hero Section -->
+    <section id="hero" class="hero section">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
+            <h1 data-aos="fade-up">{{ homeData.title }}</h1>
+            <p data-aos="fade-up" data-aos-delay="100">
+              {{ homeData.subtitle }}
+            </p>
+            <div class="d-flex flex-column flex-md-row" data-aos="fade-up" data-aos-delay="200">
+              <a v-for="button in homeData.buttons" 
+                 :key="button.text"
+                 :href="button.link" 
+                 :class="button.icon === 'bi-arrow-right' ? 'btn-get-started' : 'btn-watch-video d-flex align-items-center justify-content-center ms-0 ms-md-4 mt-4 mt-md-0'">
+                {{ button.text }} <i :class="'bi ' + button.icon"></i>
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out">
+            <img :src="homeData.image" class="img-fluid animated" :alt="homeData.imageAlt">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</template>
 
-  export default {
-    name: "HomeView",
-    data() {
-      return {
-        homeData: homeDataJson,
-      };
-    } /*
-    async created() {
-      const response = await fetch("/data/home.json");
-      this.homeData = await response.json();
-    },*/
-  };
-  </script>
+<script>
+import homeData from '@/data/home.json'
+
+export default {
+  name: "HomeView",
+  setup() {
+    return {
+      homeData
+    }
+  }
+}
+</script>
   

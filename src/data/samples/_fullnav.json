@@ -1,0 +1,119 @@
+{
+  "mainNav": [
+    {
+      "text": "Home",
+      "link": "#hero"
+    },
+    {
+      "text": "About",
+      "link": "#about"
+    },
+    {
+      "text": "Services",
+      "link": "#services"
+    },
+    {
+      "text": "Portfolio",
+      "link": "#portfolio"
+    },
+    {
+      "text": "Team",
+      "link": "#team"
+    },
+    {
+      "text": "Blog",
+      "link": "blog.html"
+    },
+    {
+      "text": "Nested Dropdown",
+      "items": [
+        {
+          "text": "Dropdown 1",
+          "link": "#"
+        },
+        {
+          "text": "Deep Dropdown",
+          "items": [
+            {
+              "text": "Deep Dropdown 1",
+              "link": "#"
+            },
+            {
+              "text": "Deep Dropdown 2",
+              "link": "#"
+            },
+            {
+              "text": "Deep Dropdown 3",
+              "link": "#"
+            },
+            {
+              "text": "Deep Dropdown 4",
+              "link": "#"
+            },
+            {
+              "text": "Deep Dropdown 5",
+              "link": "#"
+            }
+          ]
+        },
+        {
+          "text": "Dropdown 2",
+          "link": "#"
+        },
+        {
+          "text": "Dropdown 3",
+          "link": "#"
+        },
+        {
+          "text": "Dropdown 4",
+          "link": "#"
+        }
+      ]
+    },
+    {
+      "text": "Wide Dropdown",
+      "type": "listing",
+      "columns": [
+        {
+          "links": [
+            { "text": "Column 1 link 1", "link": "#" },
+            { "text": "Column 1 link 2", "link": "#" },
+            { "text": "Column 1 link 3", "link": "#" }
+          ]
+        },
+        {
+          "links": [
+            { "text": "Column 2 link 1", "link": "#" },
+            { "text": "Column 2 link 2", "link": "#" },
+            { "text": "Column 2 link 3", "link": "#" }
+          ]
+        },
+        {
+          "links": [
+            { "text": "Column 3 link 1", "link": "#" },
+            { "text": "Column 3 link 2", "link": "#" },
+            { "text": "Column 3 link 3", "link": "#" }
+          ]
+        },
+        {
+          "links": [
+            { "text": "Column 4 link 1", "link": "#" },
+            { "text": "Column 4 link 2", "link": "#" },
+            { "text": "Column 4 link 3", "link": "#" }
+          ]
+        },
+        {
+          "links": [
+            { "text": "Column 5 link 1", "link": "#" },
+            { "text": "Column 5 link 2", "link": "#" },
+            { "text": "Column 5 link 3", "link": "#" }
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Contact",
+      "link": "#contact"
+    }
+  ]
+} 

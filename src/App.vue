@@ -5,6 +5,9 @@
     
     <!-- Router View: This is where the routed pages will be injected -->
     <router-view />
+    
+    <!-- Footer component -->
+    <AppFooter />
   </div>
 
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
@@ -14,11 +17,13 @@
 <script>
 // Importing the Navbar component
 import AppNavbar from './components/AppNavbar.vue';
+import AppFooter from './components/AppFooter.vue';
 
 export default {
   name: 'App',
   components: {
-    AppNavbar
+    AppNavbar,
+    AppFooter
   }/*,
   mounted() {
     document.body.classList.add('starter-page-page');

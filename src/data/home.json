@@ -1,5 +1,18 @@
 {
-    "title": "Welcome to Electrolysis Associates",
-    "subtitle": "Your trusted provider of permanent hair removal services in Ashburn and Vienna, VA.",
-    "bannerImage": "/media/banner.jpg"
-  }
+  "title": "Only Permanent Hair Removal Technology",
+  "subtitle": "Experience safe and effective hair removal with visible results from your first session. Our advanced electrolysis technology ensures permanent results with over 25 years of proven success.",
+  "buttons": [
+    {
+      "text": "Learn More",
+      "icon": "bi-arrow-right",
+      "link": "#about"
+    },
+    {
+      "text": "Contact Us",
+      "icon": "bi-envelope",
+      "link": "#contact"
+    }
+  ],
+  "image": "/media/banner.jpg",
+  "imageAlt": "Electrolysis facility"
+}
