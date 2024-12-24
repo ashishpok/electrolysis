@@ -1,5 +1,7 @@
 // Import theme's compiled CSS
 @import '../../../public/theme/css/main.css';
 
-// Import all partials
-//@import 'variables';
+// Override theme's default spacing
+.hero {
+  min-height: 65vh;
+}

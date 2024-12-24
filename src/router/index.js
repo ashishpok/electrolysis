@@ -6,7 +6,14 @@ import Services from '../views/ServicesView.vue';
 import Contact from '../views/ContactView.vue';
 
 const routes = [
-  { path: '/', component: Home },
+  {
+    path: '/',
+    name: 'Home',
+    component: Home,
+    meta: {
+      title: 'Electrolysis Associates'
+    }
+  },
   { path: '/about', component: About },
   { path: '/locations', component: Locations },
   { path: '/services', component: Services },
@@ -17,5 +24,11 @@ const router = createRouter({
   history: createWebHistory(),
   routes,
 });
+
+// Update document title when route changes
+router.beforeEach((to, from, next) => {
+  document.title = to.meta.title || 'Electrolysis Associates'
+  next()
+})
 
 export default router;

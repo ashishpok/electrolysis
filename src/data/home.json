@@ -5,12 +5,12 @@
     {
       "text": "Learn More",
       "icon": "bi-arrow-right",
-      "link": "#about"
+      "link": "/about"
     },
     {
       "text": "Contact Us",
       "icon": "bi-envelope",
-      "link": "#contact"
+      "link": "/contact"
     }
   ],
   "image": "/media/banner.jpg",

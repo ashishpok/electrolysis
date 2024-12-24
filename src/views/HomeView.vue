@@ -14,7 +14,7 @@
                  :key="button.text"
                  :href="button.link" 
                  :class="button.icon === 'bi-arrow-right' ? 'btn-get-started' : 'btn-watch-video d-flex align-items-center justify-content-center ms-0 ms-md-4 mt-4 mt-md-0'">
-                {{ button.text }} <i :class="'bi ' + button.icon"></i>
+                {{ button.text }} <i :class="'bi ' + button.icon + ' ms-2'"></i>
               </a>
             </div>
           </div>
