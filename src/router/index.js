@@ -1,8 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import Home from '../views/HomeView.vue';
 import About from '../views/AboutView.vue';
-import Locations from '../views/LocationsView.vue';
 import Services from '../views/ServicesView.vue';
+import Locations from '../views/LocationsView.vue';
 import Contact from '../views/ContactView.vue';
 
 const routes = [
@@ -14,10 +14,38 @@ const routes = [
       title: 'Electrolysis Associates'
     }
   },
-  { path: '/about', component: About },
-  { path: '/locations', component: Locations },
-  { path: '/services', component: Services },
-  { path: '/contact', component: Contact },
+  {
+    path: '/about',
+    name: 'About',
+    component: About,
+    meta: {
+      title: 'Electrolysis Associates - About'
+    }
+  },
+  {
+    path: '/services',
+    name: 'Services',
+    component: Services,
+    meta: {
+      title: 'Electrolysis Associates - Services'
+    }
+  },
+  {
+    path: '/locations',
+    name: 'Locations',
+    component: Locations,
+    meta: {
+      title: 'Electrolysis Associates - Locations'
+    }
+  },
+  {
+    path: '/contact',
+    name: 'Contact',
+    component: Contact,
+    meta: {
+      title: 'Electrolysis Associates - Contact'
+    }
+  }
 ];
 
 const router = createRouter({

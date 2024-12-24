@@ -1,8 +1,95 @@
-[
-    { "duration": "5 minutes", "price": "$40" },
-    { "duration": "10 minutes", "price": "$55" },
-    { "duration": "15 minutes", "price": "$90" },
-    { "duration": "30 minutes", "price": "$125" },
-    { "duration": "45 minutes", "price": "$150" }
+{
+  "services": [
+    {
+      "name": "Basic Consultation",
+      "price": "Free",
+      "period": "15 minutes",
+      "color": "#20c997",
+      "icon": "bi-chat",
+      "delay": 100,
+      "features": [
+        { "text": "Personal Assessment", "included": true },
+        { "text": "Treatment Plan", "included": true },
+        { "text": "Cost Estimation", "included": true },
+        { "text": "Hair Growth Analysis", "included": true },
+        { "text": "Skin Type Evaluation", "included": true }
+      ]
+    },
+    {
+      "name": "Quick Treatment",
+      "price": "40",
+      "period": "5 minutes",
+      "color": "#0dcaf0",
+      "icon": "bi-clock",
+      "delay": 200,
+      "features": [
+        { "text": "Small Area Treatment", "included": true },
+        { "text": "Targeted Removal", "included": true },
+        { "text": "Quick Touch-up", "included": true },
+        { "text": "Basic Aftercare", "included": true },
+        { "text": "Follow-up Booking", "included": true }
+      ]
+    },
+    {
+      "name": "Standard Session",
+      "price": "55",
+      "period": "10 minutes",
+      "color": "#fd7e14",
+      "icon": "bi-stars",
+      "delay": 300,
+      "features": [
+        { "text": "Medium Area Treatment", "included": true },
+        { "text": "Precise Hair Removal", "included": true },
+        { "text": "Progress Tracking", "included": true },
+        { "text": "Aftercare Guide", "included": true },
+        { "text": "Next Session Planning", "included": true }
+      ]
+    },
+    {
+      "name": "Extended Session",
+      "price": "90",
+      "period": "15 minutes",
+      "color": "#6f42c1",
+      "icon": "bi-gem",
+      "delay": 400,
+      "features": [
+        { "text": "Larger Area Treatment", "included": true },
+        { "text": "Comprehensive Care", "included": true },
+        { "text": "Progress Photos", "included": true },
+        { "text": "Detailed Aftercare", "included": true },
+        { "text": "Treatment Review", "included": true }
+      ]
+    },
+    {
+      "name": "Premium Session",
+      "price": "125",
+      "period": "30 minutes",
+      "color": "#0d6efd",
+      "icon": "bi-diamond",
+      "delay": 500,
+      "features": [
+        { "text": "Multiple Areas", "included": true },
+        { "text": "Extended Treatment", "included": true },
+        { "text": "Custom Care Plan", "included": true },
+        { "text": "Premium Products", "included": true },
+        { "text": "Priority Booking", "included": true }
+      ]
+    },
+    {
+      "name": "Complete Session",
+      "price": "150",
+      "period": "45 minutes",
+      "color": "#dc3545",
+      "icon": "bi-trophy",
+      "delay": 600,
+      "features": [
+        { "text": "Full Treatment Areas", "included": true },
+        { "text": "Comprehensive Session", "included": true },
+        { "text": "Complete Care Package", "included": true },
+        { "text": "VIP Scheduling", "included": true },
+        { "text": "Follow-up Support", "included": true }
+      ]
+    }
   ]
+}
   
