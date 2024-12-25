@@ -4,7 +4,7 @@
             <div class="author-container d-flex align-items-center">
                 <img src="/media/lead-electrologist.jpg" class="rounded-circle flex-shrink-0" alt="Lead Electrologist">
                 <div class="blog-details content">
-                    <h3>Our Professional Electrologist</h3>
+                    <h3>Meet Your Electrologist</h3>
                     <p>
                         With over 25 years of experience, our certified electrologist has helped thousands of clients
                         achieve their permanent hair removal goals. Trained at [Institution], she specializes in
