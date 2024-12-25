@@ -1,20 +1,38 @@
 {
   "locations": [
     {
-      "address": "22228 Fairlawn Dr",
-      "city": "Ashburn",
-      "state": "VA",
-      "zip": "20148",
-      "phone": "+1 5589 55488 55",
-      "email": "info@example.com"
+      "name": "Ashburn",
+      "address": {
+        "suite": "Suite 100",
+        "building": "Ashbrook Commons Plaza",
+        "street": "44050 Ashburn Shopping Plaza",
+        "city": "Ashburn",
+        "state": "VA",
+        "zipCode": "20147"
+      },
+      "contact": {
+        "phone": "(703) 729-1400",
+        "email": "info@electrolysisassociates.com"
+      },
+      "mapUrl": "https://maps.google.com/?q=44050+Ashburn+Shopping+Plaza+Ashburn+VA+20147",
+      "embedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3097.0556059157847!2d-77.48631542426春!3d39.05466584194669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b63dd4632ee0d1%3A0x7f5e08ee2d72e904!2s44050%20Ashburn%20Shopping%20Plaza%2C%20Ashburn%2C%20VA%2020147!5e0!3m2!1sen!2sus!4v1682913771193!5m2!1sen!2sus"
     },
     {
-      "address": "143 Church St",
-      "city": "Vienna",
-      "state": "VA",
-      "zip": "22180",
-      "phone": "+1 5589 55488 55",
-      "email": "info@example.com"
+      "name": "Vienna",
+      "address": {
+        "suite": "Suite 210",
+        "building": "Cedar Park Shopping Center",
+        "street": "280 Cedar Lane SE",
+        "city": "Vienna",
+        "state": "VA",
+        "zipCode": "22180"
+      },
+      "contact": {
+        "phone": "(703) 281-0900",
+        "email": "info@electrolysisassociates.com"
+      },
+      "mapUrl": "https://maps.google.com/?q=280+Cedar+Lane+SE+Vienna+VA+22180",
+      "embedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3106.0556059157847!2d-77.26631542426春!3d38.89466584194669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b64c8b4f9e0d1%3A0x7f5e08ee2d72e904!2s280%20Cedar%20Ln%20SE%2C%20Vienna%2C%20VA%2022180!5e0!3m2!1sen!2sus!4v1682913771193!5m2!1sen!2sus"
     }
   ]
 }

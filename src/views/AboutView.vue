@@ -1,18 +1,14 @@
 <template>
   <main class="main">
-    <!-- Page Title -->
-    <div class="page-title">
-      <div class="heading">
-        <div class="container">
-          <div class="row d-flex justify-content-center text-center">
-            <div class="col-lg-8">
-              <h1>About Me & Our Procedure</h1>
-              <p class="mb-0">Understanding permanent hair removal through electrolysis</p>
-            </div>
-          </div>
+    
+    <section id="about" class="about section">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>About Me & Our Procedure</h2>
+          <p>Understanding permanent hair removal through electrolysis</p>
         </div>
       </div>
-    </div>
+    </section>
 
     <div class="container">
       <div class="row">

@@ -7,10 +7,11 @@
               <span class="sitename">Electrolysis Associates</span>
             </a>
             <div class="footer-contact pt-3">
-              <p>{{ locations.locations[0].address }}</p>
-              <p>{{ locations.locations[0].city }}, {{ locations.locations[0].state }} {{ locations.locations[0].zip }}</p>
-              <p class="mt-3"><strong>Phone:</strong> <span>{{ locations.locations[0].phone }}</span></p>
-              <p><strong>Email:</strong> <span>{{ locations.locations[0].email }}</span></p>
+              <p><strong>{{ locations.locations[0].address.building }}</strong></p>
+              <p>{{ locations.locations[0].address.street }}, {{ locations.locations[0].address.suite }}</p>
+              <p>{{ locations.locations[0].address.city }}, {{ locations.locations[0].address.state }} {{ locations.locations[0].address.zipCode }}</p>
+              <p class="mt-3"><strong>Phone:</strong> <span>{{ locations.locations[0].contact.phone }}</span></p>
+              <p><strong>Email:</strong> <span>{{ locations.locations[0].contact.email }}</span></p>
             </div>
           </div>
   

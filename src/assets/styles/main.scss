@@ -2,11 +2,18 @@
 @import '../../../public/theme/css/main.css';
 
 // Override theme's default spacing
+
+//Home page image section height
 .hero {
   min-height: 65vh;
 }
 
-#about-details {
+// About page sub-section overrides
+section#about {
+    padding: 60px 0 0 0;
+}
+
+section#about-details {
     padding: 0px 0;
 }
 
@@ -21,4 +28,15 @@ section#about-process {
 
 section#about-faq {
     padding: 10px;
+}
+
+.blog-details .content blockquote {
+    padding: 20px;
+}
+
+// Locations page overrides
+#locations iframe {
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 5px;
 }
