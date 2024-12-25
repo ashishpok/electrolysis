@@ -7,6 +7,7 @@
       "color": "#20c997",
       "icon": "bi-chat",
       "delay": 100,
+      "featured": false,
       "features": [
         { "text": "Personal Assessment", "included": true },
         { "text": "Treatment Plan", "included": true },
@@ -17,11 +18,12 @@
     },
     {
       "name": "Quick Treatment",
-      "price": "40",
-      "period": "5 minutes",
+      "price": "55",
+      "period": "15 minutes",
       "color": "#0dcaf0",
       "icon": "bi-clock",
       "delay": 200,
+      "featured": false,
       "features": [
         { "text": "Small Area Treatment", "included": true },
         { "text": "Targeted Removal", "included": true },
@@ -32,11 +34,12 @@
     },
     {
       "name": "Standard Session",
-      "price": "55",
-      "period": "10 minutes",
+      "price": "77",
+      "period": "20 minutes",
       "color": "#fd7e14",
       "icon": "bi-stars",
       "delay": 300,
+      "featured": false,
       "features": [
         { "text": "Medium Area Treatment", "included": true },
         { "text": "Precise Hair Removal", "included": true },
@@ -47,11 +50,12 @@
     },
     {
       "name": "Extended Session",
-      "price": "90",
-      "period": "15 minutes",
+      "price": "93",
+      "period": "30 minutes",
       "color": "#6f42c1",
       "icon": "bi-gem",
       "delay": 400,
+      "featured": false,
       "features": [
         { "text": "Larger Area Treatment", "included": true },
         { "text": "Comprehensive Care", "included": true },
@@ -62,11 +66,12 @@
     },
     {
       "name": "Premium Session",
-      "price": "125",
-      "period": "30 minutes",
+      "price": "122",
+      "period": "45 minutes",
       "color": "#0d6efd",
       "icon": "bi-diamond",
       "delay": 500,
+      "featured": false,
       "features": [
         { "text": "Multiple Areas", "included": true },
         { "text": "Extended Treatment", "included": true },
@@ -77,11 +82,12 @@
     },
     {
       "name": "Complete Session",
-      "price": "150",
-      "period": "45 minutes",
+      "price": "145",
+      "period": "60 minutes",
       "color": "#dc3545",
       "icon": "bi-trophy",
       "delay": 600,
+      "featured": false,
       "features": [
         { "text": "Full Treatment Areas", "included": true },
         { "text": "Comprehensive Session", "included": true },

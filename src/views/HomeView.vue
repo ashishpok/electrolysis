@@ -19,7 +19,7 @@
             </div>
           </div>
           <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out">
-            <img :src="homeData.image" class="img-fluid animated" :alt="homeData.imageAlt">
+            <img :src="homeData.image" class="img-fluid rounded animated" :alt="homeData.imageAlt">
           </div>
         </div>
       </div>
