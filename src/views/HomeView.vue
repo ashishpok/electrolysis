@@ -24,14 +24,21 @@
         </div>
       </div>
     </section>
+
+    <!-- Reviews Section -->
+    <HomeReviews />
   </main>
 </template>
 
 <script>
 import homeData from '@/data/home.json'
+import HomeReviews from '@/components/home/HomeReviews.vue'
 
 export default {
   name: "HomeView",
+  components: {
+    HomeReviews
+  },
   setup() {
     return {
       homeData
@@ -39,4 +46,3 @@ export default {
   }
 }
 </script>
-  
