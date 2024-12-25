@@ -1,6 +1,6 @@
 import googleConfig from '@/data/google-api.json'
 
-const { API_KEY, PLACE_ID } = googleConfig;
+const { API_KEY, PLACE_ID, MAX_REVIEWS } = googleConfig;
 
 export default {
   async initGooglePlaces() {
@@ -47,7 +47,7 @@ export default {
             if (reviews.length > 0) {
               console.log('Total reviews:', reviews.length);
             }
-            const formattedReviews = reviews.slice(0, 5).map(review => ({
+            const formattedReviews = reviews.slice(0, MAX_REVIEWS).map(review => ({
               author_name: review.author_name,
               rating: review.rating,
               text: review.text,
