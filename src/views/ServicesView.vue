@@ -1,13 +1,12 @@
 <template>
   <main class="main">
     <!-- Pricing/Services Section -->
+    <SectionTitle 
+      title="Our Services"
+      subtitle="Professional Electrolysis Solutions"
+      id="services-title"
+    />
     <section id="pricing" class="pricing section">
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Our Services</h2>
-        <p>Professional Electrolysis Solutions</p>
-      </div>
-
       <div class="container">
         <div class="row gy-4">
           <div class="col-lg-4 col-md-6" v-for="service in servicesData.services" :key="service.name" data-aos="zoom-in" :data-aos-delay="service.delay">
@@ -45,9 +44,13 @@
 
 <script>
 import servicesData from '@/data/services.json'
+import SectionTitle from '@/components/common/SectionTitle.vue'
 
 export default {
   name: "ServicesView",
+  components: {
+    SectionTitle
+  },
   setup() {
     return {
       servicesData

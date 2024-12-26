@@ -1,12 +1,12 @@
 <template>
   <main class="main">
-    <section id="locations" class="about section">
+    <SectionTitle 
+      title="Our Locations"
+      subtitle="Visit us at our convenient locations"
+      id="locations-title"
+    />
+    <section id="locations" class="about section"> <!-- TODO: change to locations but about is needed for formating -->
       <div class="container" data-aos="fade-up">
-        <div class="section-title">
-          <h2>Our Location</h2>
-          <p>Visit us at our convenient location</p>
-        </div>
-
         <div class="row gx-0">
           <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
             <div class="content">
@@ -48,9 +48,13 @@
 
 <script>
 import locationsData from '@/data/locations.json'
+import SectionTitle from '@/components/common/SectionTitle.vue'
 
 export default {
   name: 'LocationsView',
+  components: {
+    SectionTitle
+  },
   setup() {
     return {
       //only one location for now

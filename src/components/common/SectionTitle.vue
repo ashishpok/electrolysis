@@ -1,5 +1,5 @@
 <template>
-  <section :id="sectionId" class="section">
+  <section :id="sectionId" class="section section-narrow">
     <div class="container" data-aos="fade-up">
       <div class="section-title">
         <h2>{{ title }}</h2>

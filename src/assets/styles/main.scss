@@ -7,8 +7,11 @@
 .hero {
   min-height: 65vh;
 }
-section#testimonials-title {
+.section-narrow {
     padding: 60px 0 0 0;
+}
+.section-title {
+    padding: 0 0 30px 0;
 }
 
 section#testimonials {
@@ -16,12 +19,8 @@ section#testimonials {
 }
 
 // About page sub-section overrides
-section#about {
-    padding: 60px 0 0 0;
-}
-
 section#about-details {
-    padding: 0px 0;
+    padding: 0 0 0 0;
 }
 
 section#about-electrologist p {
@@ -40,10 +39,23 @@ section#about-faq {
 .blog-details .content blockquote {
     padding: 20px;
 }
+// Contact page overrides
+section#contact {
+    padding: 0;
+}
 
 // Locations page overrides
+section#locations {
+    padding: 0;
+}
+
 #locations iframe {
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     padding: 5px;
 }
+
+// Services page overrides
+section#pricing {
+    padding: 0;
+}   

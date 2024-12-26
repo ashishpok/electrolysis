@@ -1,14 +1,10 @@
 <template>
   <main class="main">
-    
-    <section id="about" class="about section">
-      <div class="container" data-aos="fade-up">
-        <div class="section-title">
-          <h2>About Me & Our Procedure</h2>
-          <p>Understanding permanent hair removal through electrolysis</p>
-        </div>
-      </div>
-    </section>
+    <SectionTitle 
+      title="About Me & Our Procedure"
+      subtitle="Understanding permanent hair removal through electrolysis"
+      id="about-title"
+    />
 
     <div class="container">
       <div class="row">
@@ -61,6 +57,7 @@ import AboutElectrologist from '@/components/about/AboutElectrologist.vue'
 import AboutProcess from '@/components/about/AboutProcess.vue'
 import AboutFAQ from '@/components/about/AboutFAQ.vue'
 import SideNav from '@/components/common/SideNav.vue'
+import SectionTitle from '@/components/common/SectionTitle.vue'
 
 export default {
   name: 'AboutView',
@@ -68,7 +65,8 @@ export default {
     AboutElectrologist,
     AboutProcess,
     AboutFAQ,
-    SideNav
+    SideNav,
+    SectionTitle
   }
 }
 </script>

@@ -1,13 +1,12 @@
 <template>
   <main class="main">
+    <SectionTitle 
+      title="Contact Us"
+      subtitle="Get in touch with us"
+      id="contact-title"
+    />
     <section id="contact" class="contact section">
       <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Contact Us</h2>
-          <p>Connect with us for any questions or inquiries</p>
-        </div>
-
         <div class="row justify-content-center">
           <div class="col-lg-6">
             <form @submit.prevent="handleSubmit" class="php-email-form needs-validation" novalidate>
@@ -56,8 +55,13 @@
 </template>
 
 <script>
+import SectionTitle from '@/components/common/SectionTitle.vue'
+
 export default {
   name: 'ContactView',
+  components: {
+    SectionTitle
+  },
   data() {
     return {
       form: {
