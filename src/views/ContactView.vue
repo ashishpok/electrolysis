@@ -9,41 +9,105 @@
       <div class="container" data-aos="fade-up">
         <div class="row justify-content-center">
           <div class="col-lg-6">
-            <form @submit.prevent="handleSubmit" class="php-email-form needs-validation" novalidate>
-              <div class="row gy-4">
+            <form @submit.prevent="handleSubmit" class="card p-4">
+              <div class="row g-3">
+                <!-- Name -->
                 <div class="col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder="Your Name" required>
-                </div>
-
-                <div class="col-md-6">
-                  <input type="email" class="form-control" name="email" placeholder="Your Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                  <input 
+                    type="text" 
+                    name="name" 
+                    class="form-control" 
+                    placeholder="Your Name *" 
+                    required
+                  >
                   <div class="invalid-feedback">
-                    Please enter a valid email address.
+                    Please provide your name.
                   </div>
                 </div>
 
-                <div class="col-md-12">
-                  <select class="form-select" name="subject" required>
-                    <option value="" disabled selected>Select a Subject</option>
-                    <option value="appointment">Schedule an Appointment</option>
-                    <option value="services">Questions about Services</option>
-                    <option value="pricing">Pricing Information</option>
-                    <option value="preparation">Pre/Post Treatment Care</option>
-                    <option value="location">Location & Directions</option>
-                    <option value="other">Other Inquiry</option>
+                <!-- Email -->
+                <div class="col-md-6">
+                  <input 
+                    type="email" 
+                    class="form-control" 
+                    name="email" 
+                    placeholder="Your Email *" 
+                    required
+                  >
+                  <div class="invalid-feedback">
+                    Please provide a valid email.
+                  </div>
+                </div>
+
+                <!-- Phone -->
+                <div class="col-md-6">
+                  <input 
+                    type="tel" 
+                    class="form-control" 
+                    name="phone" 
+                    placeholder="US Phone Number (Optional)"
+                    @input="handlePhoneInput"
+                    maxlength="14"
+                  >
+                  <div class="invalid-feedback">
+                    Please enter a valid US phone number.
+                  </div>
+                </div>
+
+                <!-- Subject -->
+                <div class="col-md-6">
+                  <select 
+                    class="form-select" 
+                    name="subject" 
+                    required
+                  >
+                    <option value="">Select a Reason *</option>
+                    <option value="Appointment">Schedule an Appointment</option>
+                    <option value="Services">Questions about Services</option>
+                    <option value="Pricing">Pricing Information</option>
+                    <option value="Preparation">Pre/Post Treatment Care</option>
+                    <option value="Location">Location & Directions</option>
+                    <option value="Other">Other Inquiry</option>
                   </select>
+                  <div class="invalid-feedback">
+                    Please select a reason for contact.
+                  </div>
                 </div>
 
-                <div class="col-md-12">
-                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
+                <!-- Message -->
+                <div class="col-12">
+                  <textarea 
+                    class="form-control" 
+                    name="message" 
+                    rows="6" 
+                    placeholder="Message" 
+                    required
+                  ></textarea>
+                  <div class="invalid-feedback">
+                    Please provide your message.
+                  </div>
                 </div>
 
-                <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
+                <!-- Status Messages -->
+                <div class="col-12">
+                  <div class="d-none alert alert-info" role="alert" id="loadingMessage">
+                    Sending message...
+                  </div>
+                  <div class="d-none alert alert-danger" role="alert" id="errorMessage"></div>
+                  <div class="d-none alert alert-success" role="alert" id="successMessage">
+                    Your message has been sent. Thank you!
+                  </div>
+                </div>
 
-                  <button type="submit">Send Message</button>
+                <!-- Submit Button -->
+                <div class="col-12 text-center">
+                  <button 
+                    type="submit" 
+                    class="btn btn-lg" 
+                    style="background-color: var(--accent-color); color: white;"
+                  >
+                    Send Message
+                  </button>
                 </div>
               </div>
             </form>
@@ -56,31 +120,124 @@
 
 <script>
 import SectionTitle from '@/components/common/SectionTitle.vue'
+import EmailService from '@/services/EmailService'
 
 export default {
   name: 'ContactView',
   components: {
     SectionTitle
   },
-  data() {
-    return {
-      form: {
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
-      }
-    }
-  },
   methods: {
-    handleSubmit(event) {
+    formatPhoneNumber(event) {
+      let input = event.target;
+      let value = input.value.replace(/\D/g, '');
+      
+      if (value.length > 0) {
+        if (value.length <= 3) {
+          input.value = value;
+        } else if (value.length <= 6) {
+          input.value = value.slice(0, 3) + '-' + value.slice(3);
+        } else {
+          input.value = value.slice(0, 3) + '-' + value.slice(3, 6) + '-' + value.slice(6, 10);
+        }
+      }
+    },
+
+    validatePhoneNumber(phone) {
+      if (!phone) return true; // Optional field
+      const phoneRegex = /^\d{3}-\d{3}-\d{4}$/;
+      return phoneRegex.test(phone);
+    },
+
+    handlePhoneInput(event) {
+      const input = event.target;
+      this.formatPhoneNumber(event);
+      
+      // Clear validation state when input changes
+      if (this.validatePhoneNumber(input.value) || !input.value) {
+        input.setCustomValidity('');
+      } else {
+        input.setCustomValidity('Invalid phone number format');
+      }
+      
+      // Update validation UI
+      const form = input.closest('form');
+      if (form.classList.contains('was-validated')) {
+        // Force validation UI update
+        input.classList.remove('is-valid', 'is-invalid');
+        setTimeout(() => {
+          form.classList.add('was-validated');
+        }, 0);
+      }
+    },
+
+    async handleSubmit(event) {
       const form = event.target;
+      const loadingMessage = document.getElementById('loadingMessage');
+      const errorMessage = document.getElementById('errorMessage');
+      const successMessage = document.getElementById('successMessage');
+      
+      // Reset messages
+      loadingMessage.classList.add('d-none');
+      errorMessage.classList.add('d-none');
+      successMessage.classList.add('d-none');
+
+      // Validate phone if provided
+      const phoneInput = form.elements.phone;
+      if (phoneInput.value && !this.validatePhoneNumber(phoneInput.value)) {
+        phoneInput.setCustomValidity('Invalid phone number format');
+        form.classList.add('was-validated');
+        return;
+      } else {
+        phoneInput.setCustomValidity('');
+      }
+
+      // Validate form
       if (!form.checkValidity()) {
         event.preventDefault();
         event.stopPropagation();
+        form.classList.add('was-validated');
+        return;
       }
-      form.classList.add('was-validated');
+
+      try {
+        // Show loading
+        loadingMessage.classList.remove('d-none');
+
+        const formData = {
+          name: form.elements.name.value,
+          email: form.elements.email.value,
+          phone: form.elements.phone.value,
+          subject: form.elements.subject.value,
+          message: form.elements.message.value
+        };
+
+        const result = await EmailService.sendEmail(formData);
+
+        if (result.success) {
+          successMessage.classList.remove('d-none');
+          form.reset();
+          form.classList.remove('was-validated');
+        } else {
+          errorMessage.textContent = result.message;
+          errorMessage.classList.remove('d-none');
+        }
+
+      } catch (error) {
+        console.error('Form submission error:', error);
+        errorMessage.textContent = 'An unexpected error occurred. Please try again later.';
+        errorMessage.classList.remove('d-none');
+      } finally {
+        loadingMessage.classList.add('d-none');
+      }
     }
+  },
+  mounted() {
+    EmailService.init();
   }
 }
 </script>
+
+<style scoped>
+
+</style>
