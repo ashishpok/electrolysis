@@ -121,6 +121,7 @@ export default {
   methods: {
     formatPhoneNumber(event) {
       let input = event.target;
+      // Remove all non-digits
       let value = input.value.replace(/\D/g, '');
       
       if (value.length > 0) {
@@ -136,13 +137,30 @@ export default {
 
     validatePhoneNumber(phone) {
       if (!phone) return true; // Optional field
-      const phoneRegex = /^\d{3}-\d{3}-\d{4}$/;
+      
+      // First, strip all non-digits
+      const stripped = phone.replace(/\D/g, '');
+      
+      // Check if we have exactly 10 digits
+      if (stripped.length !== 10) return false;
+      
+      // Allow these formats:
+      // 1234567890
+      // 123-456-7890
+      // 123 456 7890
+      // (123) 456-7890
+      // (123) 456 7890
+      const phoneRegex = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+      
       return phoneRegex.test(phone);
     },
 
     handlePhoneInput(event) {
       const input = event.target;
-      this.formatPhoneNumber(event);
+      // Don't format if the user is using spaces or parentheses
+      if (!input.value.includes('(') && !input.value.includes(' ')) {
+        this.formatPhoneNumber(event);
+      }
       
       // Clear validation state when input changes
       if (this.validatePhoneNumber(input.value) || !input.value) {
@@ -154,7 +172,6 @@ export default {
       // Update validation UI
       const form = input.closest('form');
       if (form.classList.contains('was-validated')) {
-        // Force validation UI update
         input.classList.remove('is-valid', 'is-invalid');
         setTimeout(() => {
           form.classList.add('was-validated');
@@ -174,6 +191,13 @@ export default {
       return validator(value);
     },
 
+    /*
+    * Handle form submission, expect a response with a success boolean and an optional message
+    interface SubmitResponse {
+        success: boolean;
+        message?: string;  // Optional error message if success is false
+    }
+    */
     async handleSubmit(event) {
       const form = event.target;
       

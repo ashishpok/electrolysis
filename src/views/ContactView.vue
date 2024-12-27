@@ -7,7 +7,6 @@
     />
     <section id="contact" class="contact">
       <div class="container" data-aos="fade-up">
-
         <div class="row gy-4">
           <div class="col-lg-6 offset-lg-3">
             <BaseForm 
@@ -15,6 +14,7 @@
               :submit-handler="handleSubmit"
               submit-button-text="Send Message"
               loading-message="Sending message..."
+              success-message="Your message has been sent. Thank you!"
             />
           </div>
         </div>
