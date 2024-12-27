@@ -9,7 +9,7 @@
       <div class="container" data-aos="fade-up">
         <div class="row justify-content-center">
           <div class="col-lg-6">
-            <form @submit.prevent="handleSubmit" class="php-email-form">
+            <form @submit.prevent="handleSubmit" class="php-email-form" novalidate>
               <div class="row g-3">
                 <!-- Name -->
                 <div class="col-md-6">
@@ -89,9 +89,9 @@
                 </div>
 
                 <div class="col-12 text-center">
-                  <div class="loading" id="loadingMessage">Sending message...</div>
-                  <div class="error-message" id="errorMessage"></div>
-                  <div class="sent-message" id="successMessage">
+                  <div class="loading" :style="{ display: loading ? 'block' : 'none', background: 'transparent' }">Sending...</div>
+                  <div class="error-message" :style="{ display: error ? 'block' : 'none' }">{{ error }}</div>
+                  <div class="sent-message" :style="{ display: success ? 'block' : 'none' }">
                     Your message has been sent. Thank you!
                   </div>
 
@@ -115,6 +115,13 @@ export default {
   name: 'ContactView',
   components: {
     SectionTitle
+  },
+  data() {
+    return {
+      loading: false,
+      error: null,
+      success: false
+    }
   },
   methods: {
     formatPhoneNumber(event) {
@@ -162,14 +169,11 @@ export default {
 
     async handleSubmit(event) {
       const form = event.target;
-      const loadingMessage = document.getElementById('loadingMessage');
-      const errorMessage = document.getElementById('errorMessage');
-      const successMessage = document.getElementById('successMessage');
       
-      // Reset messages
-      loadingMessage.classList.add('d-none');
-      errorMessage.classList.add('d-none');
-      successMessage.classList.add('d-none');
+      // Reset status
+      this.loading = false;
+      this.error = null;
+      this.success = false;
 
       // Validate phone if provided
       const phoneInput = form.elements.phone;
@@ -191,7 +195,7 @@ export default {
 
       try {
         // Show loading
-        loadingMessage.classList.remove('d-none');
+        this.loading = true;
 
         const formData = {
           name: form.elements.name.value,
@@ -204,20 +208,18 @@ export default {
         const result = await EmailService.sendEmail(formData);
 
         if (result.success) {
-          successMessage.classList.remove('d-none');
+          this.success = true;
           form.reset();
           form.classList.remove('was-validated');
         } else {
-          errorMessage.textContent = result.message;
-          errorMessage.classList.remove('d-none');
+          this.error = result.message || 'Failed to send message. Please try again.';
         }
 
       } catch (error) {
         console.error('Form submission error:', error);
-        errorMessage.textContent = 'An unexpected error occurred. Please try again later.';
-        errorMessage.classList.remove('d-none');
+        this.error = 'An unexpected error occurred. Please try again later.';
       } finally {
-        loadingMessage.classList.add('d-none');
+        this.loading = false;
       }
     }
   },
