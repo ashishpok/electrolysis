@@ -9,7 +9,7 @@
       <div class="container" data-aos="fade-up">
         <div class="row justify-content-center">
           <div class="col-lg-6">
-            <form @submit.prevent="handleSubmit" class="card p-4">
+            <form @submit.prevent="handleSubmit" class="php-email-form">
               <div class="row g-3">
                 <!-- Name -->
                 <div class="col-md-6">
@@ -88,33 +88,22 @@
                   </div>
                 </div>
 
-                <!-- Status Messages -->
-                <div class="col-12">
-                  <div class="d-none alert alert-info" role="alert" id="loadingMessage">
-                    Sending message...
-                  </div>
-                  <div class="d-none alert alert-danger" role="alert" id="errorMessage"></div>
-                  <div class="d-none alert alert-success" role="alert" id="successMessage">
+                <div class="col-12 text-center">
+                  <div class="loading" id="loadingMessage">Sending message...</div>
+                  <div class="error-message" id="errorMessage"></div>
+                  <div class="sent-message" id="successMessage">
                     Your message has been sent. Thank you!
                   </div>
-                </div>
 
-                <!-- Submit Button -->
-                <div class="col-12 text-center">
-                  <button 
-                    type="submit" 
-                    class="btn btn-lg" 
-                    style="background-color: var(--accent-color); color: white;"
-                  >
-                    Send Message
-                  </button>
+                  <button type="submit">Send Message</button>
                 </div>
               </div>
             </form>
           </div>
         </div>
+
       </div>
-    </section>
+    </section><!-- End Contact Section -->
   </main>
 </template>
 
