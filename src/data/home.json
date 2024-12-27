@@ -14,5 +14,33 @@
     }
   ],
   "image": "/media/banner.jpg",
-  "imageAlt": "Electrolysis facility"
+  "imageAlt": "Electrolysis facility",
+  "seo": {
+    "title": "Permanent Hair Removal | Professional Electrolysis Services in Ashburn, VA",
+    "description": "Professional electrolysis services in Ashburn, VA. Safe, permanent hair removal with 10 years experience. FDA-approved treatments for all skin types. Book your consultation today!",
+    "keywords": [
+      "electrolysis",
+      "permanent hair removal",
+      "Ashburn electrolysis",
+      "professional hair removal",
+      "FDA approved hair removal",
+      "safe hair removal",
+      "permanent hair reduction",
+      "facial hair removal",
+      "body hair removal",
+      "licensed electrologist"
+    ],
+    "og": {
+      "title": "Professional Electrolysis Services in Ashburn, VA",
+      "description": "Safe, permanent hair removal with 25+ years experience. FDA-approved treatments for all skin types.",
+      "image": "/media/og-image.jpg",
+      "url": "https://www.electrolysisva.com"
+    },
+    "twitter": {
+      "card": "summary_large_image",
+      "title": "Professional Electrolysis Services in Ashburn, VA",
+      "description": "Safe, permanent hair removal with 25+ years experience.",
+      "image": "/media/twitter-card.jpg"
+    }
+  }
 }

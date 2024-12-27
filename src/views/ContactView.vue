@@ -42,29 +42,33 @@ export default {
           name: 'name',
           placeholder: 'Your Name *',
           required: true,
-          invalidFeedback: 'Please provide your name.'
+          invalidFeedback: 'Please provide your name.',
+          containerClass: 'col-md-6'
         },
         {
           type: 'email',
           name: 'email',
           placeholder: 'Your Email *',
           required: true,
-          invalidFeedback: 'Please provide a valid email.'
+          invalidFeedback: 'Please provide a valid email.',
+          containerClass: 'col-md-6'
         },
         {
           type: 'tel',
           name: 'phone',
           placeholder: 'US Phone Number (Optional)',
           maxlength: 14,
-          invalidFeedback: 'Please enter a valid US phone number.'
+          invalidFeedback: 'Please enter a valid US phone number.',
+          containerClass: 'col-md-6'
         },
         {
           type: 'select',
           name: 'subject',
           required: true,
           invalidFeedback: 'Please select a reason for contact.',
+          containerClass: 'col-md-6',
           options: [
-            { value: '', text: 'Select a Reason *' },
+            { value: '', text: 'Select a Reason*', disabled: true, selected: true },
             { value: 'Appointment', text: 'Schedule an Appointment' },
             { value: 'Services', text: 'Questions about Services' },
             { value: 'Pricing', text: 'Pricing Information' },

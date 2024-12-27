@@ -22,8 +22,8 @@
           </section>
         </div>
 
-        <!-- Wrap SideNav in column div -->
-        <div class="col-lg-4">
+        <!-- Hide SideNav on mobile -->
+        <div class="col-lg-4 d-none d-lg-block">
           <div class="position-sticky" style="top: 125px;">
             <SideNav 
               title="About Us"

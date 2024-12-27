@@ -2,7 +2,7 @@
   <form @submit.prevent="handleSubmit" class="php-email-form" novalidate>
     <div class="row gy-4">
       <template v-for="field in fields" :key="field.name">
-        <div :class="field.containerClass || 'col-md-6'">
+        <div :class="field.containerClass">
           <!-- Input -->
           <template v-if="field.type !== 'select' && field.type !== 'textarea'">
             <input
@@ -12,7 +12,7 @@
               :placeholder="field.placeholder"
               :required="field.required"
               :maxlength="field.maxlength"
-              @input="field.handler ? field.handler($event) : null"
+              @input="field.type === 'tel' ? handlePhoneInput($event) : null"
               v-model="formData[field.name]"
             >
             <div class="invalid-feedback">
@@ -74,6 +74,13 @@
     </div>
   </form>
 </template>
+
+<style scoped>
+.php-email-form input[type="tel"]::placeholder {
+  color: #6c757d !important;
+  opacity: 0.6;
+}
+</style>
 
 <script>
 export default {
